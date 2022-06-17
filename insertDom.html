@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insert Dom</title>
+
+    <style>
+        article {
+            border: 2px solid tomato;
+            border-radius: 20px;
+            margin: 5px;
+            padding: 5px;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <h2>Insert Dom</h2>
+    <br>
+
+
+    <article id="first-article">
+        <h3>article-1</h3>
+        <p class="author">author-1</p>
+        <p class="description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Natus, similique.</p>
+    </article>
+    <article class="special">
+        <h3>article-2</h3>
+        <p class="author">author-2</p>
+        <p class="description">Corporis suscipit qui vitae porro ipsa dolorum aliquam quasi dolore.</p>
+    </article>
+    <article>
+        <h3>article-3</h3>
+        <p class="author">author-3</p>
+        <p class="description">Provident dolore dignissimos suscipit delectus consequatur! Adipisci minima provident
+            laboriosam.</p>
+    </article>
+
+    <article>
+        <h3>Grocery List</h3>
+        <ul id="gift-list">
+            <li>gift-item -1</li>
+            <li>gift-item -2</li>
+            <li>gift-item -3</li>
+            <li>gift-item -4</li>
+            <li>gift-item -5</li>
+        </ul>
+    </article>
+
+    <script>
+        //New article added
+        const article = document.getElementById('first-article');
+        const newParagraph = document.createElement('p');
+        newParagraph.innerHTML = 'This is added by JavaScript';
+        article.appendChild(newParagraph);
+
+
+        //New gift item added
+        const li = document.getElementById('gift-list');
+        const newLi = document.createElement('li');
+        newLi.innerHTML = 'Brand New Item (added by JS)';
+        li.appendChild(newLi);
+
+    </script>
+
+</body>
+
+</html>
