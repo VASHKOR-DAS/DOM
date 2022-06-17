@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        article{
+            border: 2px solid tomato;
+            border-radius: 20px;
+            margin: 5px;
+            padding: 5px;
+        }
+
+        .special h3{
+
+        }
+    </style>
+
+</head>
+<body>
+
+    <h2>Dom Explore</h2>
+    <br>
+
+
+    <article>
+        <h3>article-1</h3>
+        <p class="author">author-1</p>
+        <p class="description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Natus, similique.</p>
+    </article>
+    <article class="special">
+        <h3>article-2</h3>
+        <p class="author">author-2</p>
+        <p class="description">Corporis suscipit qui vitae porro ipsa dolorum aliquam quasi dolore.</p>
+    </article>
+    <article>
+        <h3>article-3</h3>
+        <p class="author">author-3</p>
+        <p class="description">Provident dolore dignissimos suscipit delectus consequatur! Adipisci minima provident laboriosam.</p>
+    </article>
+
+
+    <script>
+        var authors = document.querySelectorAll('.special h3');
+
+        for (let i = 0; i < authors.length; i++) {
+            const element = authors[i];
+            
+            //console.log(authors);
+            element.innerHTML = 'Lekhok' + (i+1);
+            element.style.backgroundColor = 'lightblue';
+
+            element.style.margin = '20px';
+
+
+            
+        }
+
+
+    </script>
+    
+</body>
+</html>
+
+<!-- document.querySelectorAll dile output a console a akta array (collection) dibe -->
